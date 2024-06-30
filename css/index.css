@@ -32,19 +32,17 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000; /* Ensure the navbar stays on top of other content */
-    transition: height 0.4s ease; /*navbar height transition */
+    transition: height 0.4s ease; /* navbar height transition */
 }
 
 /* Large navbar state */
 .navbar-large {
-    height: 100px; /* Example initial large height */
-    /* Add other styling as needed */
+    height: 100px; /* initial large height */
 }
 
 /* Small navbar state */
 .navbar-small {
-    height: 50px; /* Example smaller height when scrolled */
-    /* Add other styling as needed */
+    height: 50px; /* smaller height when scrolled */
 }
 
 /* Container for centering links */
@@ -122,10 +120,16 @@ body {
 /* Refine Navigation Bar for Mobile */
 @media screen and (max-width: 600px) {
     .navbar {
+        transition: none; /* Disable height transition */
+        height: auto; /* Override fixed height */
         flex-direction: column;
         align-items: center; /* This centers the items in the navbar, including the logo if it's a direct child */
         padding: 0px;
         position: static; /* Override sticky or fixed positioning */
+        transition: none; /* Disable height transition on mobile */
+    }
+    .navbar-large, .navbar-small {
+        height: auto; /* Ensure consistent height in mobile view */
     }
     .nav-logo {
         width: 100%; /* Ensure the nav-logo element spans the full width */
@@ -136,6 +140,11 @@ body {
         flex-direction: column; /* Stack the links vertically */
         gap: 10px; /* Adjust gap for vertical spacing if needed */
         width: 100%; /* Make nav-links container full width */
+    }
+    .navbar a {
+        text-align: center; /* Center-align the link text */
+        width: 100%; /* Make links span the full width */
+        padding: 10px 0; /* Adjust padding as needed */
     }
     .nav-phone {
         width: 100%;
@@ -152,6 +161,12 @@ body {
     }
     .hero {
         height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        transition: none; /* Disable height transition on mobile */
     }
 }
 
