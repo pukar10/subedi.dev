@@ -22,6 +22,7 @@ body {
 }
 
 /* Adjust the navbar to use flexbox */
+/* Initial state of the navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -31,6 +32,19 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000; /* Ensure the navbar stays on top of other content */
+    transition: height 0.4s ease; /*navbar height transition */
+}
+
+/* Large navbar state */
+.navbar-large {
+    height: 100px; /* Example initial large height */
+    /* Add other styling as needed */
+}
+
+/* Small navbar state */
+.navbar-small {
+    height: 50px; /* Example smaller height when scrolled */
+    /* Add other styling as needed */
 }
 
 /* Container for centering links */
@@ -49,6 +63,8 @@ body {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Add transition effect */
+    border-radius: 20px; /* Round the corners of the navigation bar highlights */
 }
 
 /* Change the color of the links on hover */
