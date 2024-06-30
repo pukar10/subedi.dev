@@ -109,18 +109,57 @@ body {
 
 /* Style for the hero image */
 .hero {
+    position: relative; /* Position the content relative to the hero image */
+    text-align: center; /* Center the content */
     background-image: url('../images/guatemala-volcano.webp');
     height: 100vh; /* Cover the full viewport height */
     width: 100vw; /* Cover the full viewport width */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%; /* Ensure the image covers the full width */
+    height: 100vh; /* Cover the full viewport height */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%; /* Position the content 50% from the top of hero-image*/
+    left: 50%; /* Position the content 50% from the left of hero-image */
+    transform: translate(-50%, -50%); /* Center the content */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 50px; 
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    color: #ddd;
+    margin: 0 0 20px 0; 
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    background-color: #ff0000; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
 }
 
 /* Refine Navigation Bar for Mobile */
 @media screen and (max-width: 600px) {
     .navbar {
-        transition: none; /* Disable height transition */
+        transition: none; /* Disable height transition on mobile*/
         height: auto; /* Override fixed height */
         flex-direction: column;
         align-items: center; /* This centers the items in the navbar, including the logo if it's a direct child */
@@ -165,8 +204,46 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Adjust navbar for better mobile interaction */    
     .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         transition: none; /* Disable height transition on mobile */
+    }
+    /* Ensure touch targets are large enough */
+    a, button {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 12px;
+    }
+    /* Ensure visibility and usability of the social media bar on mobile, if needed */
+    .social-media-bar {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .hero-image {
+        height: 50vh; /* Reduce height on smaller screens */
+    }
+
+    .hero-content {
+        padding: 20px; /* Reduce padding */
+        border-radius: 5px; /* Optional: Adjust border-radius */
+    }
+
+    .hero-content h1 {
+        font-size: 20px; /* Reduce font size for better readability */
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+
+    .hero-content button {
+        padding: 8px 16px; /* Adjust button size */
+        font-size: 14px; /* Adjust button font size for better readability */
     }
 }
 
