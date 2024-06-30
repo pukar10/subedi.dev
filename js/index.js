@@ -1,18 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the navbar
-    var navbar = document.querySelector('.navbar');
+// js/index.js
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('menu-toggle');
+    const body = document.body;
 
-    // Add the large class initially
-    navbar.classList.add('navbar-large');
-
-    window.onscroll = function() {
-        // When the scroll is more than 50px
-        if (window.pageYOffset > 50) {
-            navbar.classList.add('navbar-small');
-            navbar.classList.remove('navbar-large');
-        } else {
-            navbar.classList.add('navbar-large');
-            navbar.classList.remove('navbar-small');
-        }
-    };
+    toggleButton.addEventListener('click', function() {
+        body.classList.toggle('menu-open');
+    });
 });

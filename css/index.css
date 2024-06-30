@@ -1,238 +1,57 @@
-/* Reset some basic elements */
-html, body, div, a {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* Apply a natural box layout model to all elements */
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Adjust the navbar to use flexbox */
-/* Initial state of the navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure the navbar stays on top of other content */
-    transition: height 0.4s ease; /* navbar height transition */
-}
-
-/* Large navbar state */
-.navbar-large {
-    height: 100px; /* initial large height */
-}
-
-/* Small navbar state */
-.navbar-small {
-    height: 50px; /* smaller height when scrolled */
-}
-
-/* Container for centering links */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    gap: 0px; /* Add space between links */
-}
-
-/* Style for the navbar links */
-.navbar a {
-    float: none; /* Remove float from individual links */
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Add transition effect */
-    border-radius: 20px; /* Round the corners of the navigation bar highlights */
-}
-
-/* Change the color of the links on hover */
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Sytle for navigation bar logo image */
-#navbar-logo-img {
-    background-color: transparent;
-} 
-
-/* Style for the logo */
-.nav-logo {
-    margin-left: 20px; /* Adjust as needed */
-    display: flex;
-    align-items: center;
-}
-
-/* Style for the social media bar */
-.social-media-bar {
+/* css/index.css */
+.side-menu {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100; /* Ensure it stays on top of other content */
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-    /* background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */ 
-    padding: 10px;
+    left: -250px; /* Hide menu */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s;
 }
 
-.social-media-bar a {
-    color: white;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    transition: color 0.3s;
+#side-menu ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
 }
 
-.social-media-bar a:hover {
-    color: #ddd; /* Lighten the link color on hover */
+#side-menu li {
+    padding: 10px 0; /* Adds vertical padding for spacing, adjust as needed */
 }
 
-/* Style for the hero image */
-.hero {
-    position: relative; /* Position the content relative to the hero image */
-    text-align: center; /* Center the content */
-    background-image: url('../images/guatemala-volcano.webp');
-    height: 100vh; /* Cover the full viewport height */
-    width: 100vw; /* Cover the full viewport width */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
+#side-menu a {
+    display: block; /* Makes the link fill the entire list item */
+    padding: 10px; /* Adds padding inside the link for spacing */
+    background-color: #333; /* Light grey background, adjust as needed */
+    color: #ffffff; /* Text color, adjust as needed */
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 5px; /* Optional: adds rounded corners to the boxes */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
 }
 
-.hero-image {
-    width: 100%; /* Ensure the image covers the full width */
-    height: 100vh; /* Cover the full viewport height */
-    background-size: cover;
-    background-position: center;
+#side-menu a:hover {
+    background-color: #e0e0e044; /* Darker grey on hover, adjust as needed */
 }
 
-.hero-content {
-    position: absolute;
-    top: 50%; /* Position the content 50% from the top of hero-image*/
-    left: 50%; /* Position the content 50% from the left of hero-image */
-    transform: translate(-50%, -50%); /* Center the content */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    padding: 50px; 
-    border-radius: 8px;
-}
-
-.hero-content h1 {
-    color: #ddd;
-    margin: 0 0 20px 0; 
-}
-
-.hero-content button {
-    padding: 10px 20px;
-    background-color: #ff0000; /* Bootstrap primary color */
-    color: white;
-    border: none;
-    border-radius: 5px;
+#menu-toggle {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 1001;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: left 0.3s;
 }
 
-.hero-content button:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
+.menu-open .side-menu {
+    left: 0; /* Show menu */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 1300px) {
-    /* Ensure touch targets are large enough */
-    a, button {
-        min-width: 44px;
-        min-height: 44px;
-        padding: 12px;
-    }
-    /* Adjust navbar for better mobile interaction */    
-    .navbar {
-        transition: none; /* Disable height transition on mobile*/
-        height: auto; /* Override fixed height */
-        flex-direction: column;
-        align-items: center; /* This centers the items in the navbar, including the logo if it's a direct child */
-        padding: 0px;
-        position: static; /* Override sticky or fixed positioning */
-        transition: none; /* Disable height transition on mobile */
-    }
-    .navbar-large, .navbar-small {
-        height: auto; /* Ensure consistent height in mobile view */
-    }
-    .nav-logo {
-        width: 100%; /* Ensure the nav-logo element spans the full width */
-        display: flex;
-        justify-content: center; /* Center the content, which is the logo in this case */
-    }
-    .nav-links {
-        flex-direction: column; /* Stack the links vertically */
-        gap: 10px; /* Adjust gap for vertical spacing if needed */
-        width: 100%; /* Make nav-links container full width */
-    }
-    .navbar a {
-        text-align: center; /* Center-align the link text */
-        width: 100%; /* Make links span the full width */
-        padding: 10px 0; /* Adjust padding as needed */
-    }
-    .nav-phone {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .nav-phone a {
-        font-size: 16px;
-        text-align: center;
-        padding: 10px 0;
-    }
-    /* Ensure visibility and usability of the social media bar on mobile, if needed */
-    .social-media-bar {
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    .hero {
-        height: 50vh; 
-    }
-    .hero-image {
-        height: 50vh; /* Reduce height on smaller screens */
-    }
-
-    .hero-content {
-        padding: 20px; /* Reduce padding */
-        border-radius: 5px; /* Optional: Adjust border-radius */
-    }
-
-    .hero-content h1 {
-        font-size: 20px; /* Reduce font size for better readability */
-        margin-bottom: 10px; /* Adjust spacing */
-    }
-
-    .hero-content button {
-        padding: 8px 16px; /* Adjust button size */
-        font-size: 14px; /* Adjust button font size for better readability */
-    }
+.menu-open #menu-toggle {
+    left: 260px; /* Move button to the right */
 }
 
-/* Adjustments for social media bar are already in place */
+@media (min-width: 768px) {
+    .side-menu, #menu-toggle {
+        display: none; /* Hide menu and toggle button on larger screens */
+    }
+}
