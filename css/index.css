@@ -107,27 +107,35 @@ body {
 @media screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0px; /* Added padding */
+        align-items: center; /* This centers the items in the navbar, including the logo if it's a direct child */
+        padding: 0px;
+        position: static; /* Override sticky or fixed positioning */
     }
-    .nav-logo img {
-        display: none; /* Hide the logo on smaller screens */
+    .nav-logo {
+        width: 100%; /* Ensure the nav-logo element spans the full width */
+        display: flex;
+        justify-content: center; /* Center the content, which is the logo in this case */
+    }
+    .nav-links {
+        flex-direction: column; /* Stack the links vertically */
+        gap: 10px; /* Adjust gap for vertical spacing if needed */
+        width: 100%; /* Make nav-links container full width */
+    }
+    .nav-phone {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .nav-phone a {
-        font-size: 16px; /* Adjust phone number font size for readability */
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 0;
     }
-}
-
-/* Improved hero responsiveness */
-@media screen and (max-width: 600px) {
+    .social-media-bar {
+        display: none;
+    }
     .hero {
-        height: 50vh; /* Adjust the height on smaller screens to give space for content */
-    }
-    .hero-content h1 {
-        font-size: 20px; /* Smaller font size for the hero title */
-    }
-    .hero-content p {
-        font-size: 14px; /* Smaller font size for the hero description */
+        height: 50vh;
     }
 }
 
