@@ -6,6 +6,7 @@
         box-sizing: border-box;
     }
     
+    /*top mobile nav bar*/
     .mobile-nav {
         display: flex;
         justify-content: space-between;
@@ -37,6 +38,7 @@
         text-decoration: none; /* Remove underline from link */
         color: #fff; /* White text */
         font-weight: bold; /* Make it stand out */
+        font-size: 14px;;
     }
     
     .menu-button {
@@ -45,8 +47,10 @@
         border: none;
         padding: 10px;
         cursor: pointer;
+        font-size: 18px;
     }
 
+    /* Side menu for mobile */
     .side-menu {
         position: fixed;
         left: -100%; /* Start off-screen */
@@ -93,5 +97,41 @@
         color: #fff; /* White text */
         border: none;
         padding: 5px 10px; /* Adjust padding as needed */
+      }
+
+      /* Hero Section */
+      .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../images/guatemala-volcano.webp'); /* Path to your hero image */
+        height: 100vh; /* Full height of the viewport */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Cover the entire div */
+      }
+
+      .hero-content {
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        color: white;
+        max-width: 90%; /* Ensures padding within the screen size */
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-sizing: border-box; /* Ensures padding doesn't expand the box */
+      }
+      
+      .hero-content h1, .hero-content p {
+        margin: 10px 0;
+      }
+      
+      .hero-content button {
+        background-color: salmon;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px; /* Adjust based on preference */
       }
 }
