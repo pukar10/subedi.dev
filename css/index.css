@@ -1,57 +1,97 @@
-/* css/index.css */
-.side-menu {
-    position: fixed;
-    left: -250px; /* Hide menu */
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    transition: left 0.3s;
-}
-
-#side-menu ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-}
-
-#side-menu li {
-    padding: 10px 0; /* Adds vertical padding for spacing, adjust as needed */
-}
-
-#side-menu a {
-    display: block; /* Makes the link fill the entire list item */
-    padding: 10px; /* Adds padding inside the link for spacing */
-    background-color: #333; /* Light grey background, adjust as needed */
-    color: #ffffff; /* Text color, adjust as needed */
-    text-decoration: none; /* Removes underline from links */
-    border-radius: 5px; /* Optional: adds rounded corners to the boxes */
-    transition: background-color 0.3s; /* Smooth background color change on hover */
-}
-
-#side-menu a:hover {
-    background-color: #e0e0e044; /* Darker grey on hover, adjust as needed */
-}
-
-#menu-toggle {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    z-index: 1001;
-    cursor: pointer;
-    transition: left 0.3s;
-}
-
-.menu-open .side-menu {
-    left: 0; /* Show menu */
-}
-
-.menu-open #menu-toggle {
-    left: 260px; /* Move button to the right */
-}
-
-@media (min-width: 768px) {
-    .side-menu, #menu-toggle {
-        display: none; /* Hide menu and toggle button on larger screens */
+@media (max-width: 768px) {
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+    
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed; /* Stick to the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Dark background */
+        color: #fff; /* White text */
+        padding: 10px 20px; /* Some padding */
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .logo-text {
+        display: block; /* Ensures the text is above the logo */
+        color: #fff; /* White text to match your color scheme */
+        font-size: 14px; /* Adjust size as needed */
+        text-align: center; /* Center the text above the logo */
+        margin-bottom: 5px; /* Space between the text and the logo */
+    }
+
+    .logo img {
+        max-width: 50px; /* Adjust the width as needed */
+        height: auto; /* Keeps the aspect ratio intact */
+      }
+    
+    .phone-number {
+        text-decoration: none; /* Remove underline from link */
+        color: #fff; /* White text */
+        font-weight: bold; /* Make it stand out */
+    }
+    
+    .menu-button {
+        background-color: #333; /* Slightly lighter than nav background */
+        color: #fff; /* White text */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .side-menu {
+        position: fixed;
+        left: -100%; /* Start off-screen */
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        transition: left 0.3s ease; /* Smooth transition for the menu */
+        z-index: 1000; /* Ensure it's below the nav but above other content */
+      }
+
+      .side-menu ul {
+        list-style-type: none; /* Remove bullet points */
+        margin: 0;
+        padding: 0;
+        padding-top: 30px;
+      }
+
+      .side-menu li {
+        background-color: #333; /* Darker background for the box */
+        margin: 10px 0; /* Add some space between boxes */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+      }
+
+      .side-menu a {
+        display: block; /* Make the link fill the entire container */
+        color: #fff; /* White text */
+        text-decoration: none; /* No underline */
+        font-size: 18px; /* Make text bigger */
+        padding: 15px 20px; /* Add padding to make the box bigger and text centered */
+      }
+      
+      /* When the menu is active, it should slide in */
+      .side-menu.active {
+        left: 0;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 10px; /* Adjust as needed */
+        right: 10px; /* Position to the right */
+        background-color: #333; /* Match the menu-button style or as desired */
+        color: #fff; /* White text */
+        border: none;
+        padding: 5px 10px; /* Adjust padding as needed */
+      }
 }
