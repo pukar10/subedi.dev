@@ -107,7 +107,7 @@
     align-items: center;
     background-image: url('../images/guatemala-volcano.webp'); /* Path to your hero image */
     height: 100vh; /* Full height of the viewport */
-    margin-bottom: 0px; /* Adjust the space as needed */
+    margin-bottom: 100px; /* Adjust the space as needed */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Cover the entire div */
@@ -141,12 +141,13 @@
     .team-section {
         text-align: center;
         padding: 40px 20px;
-        background: linear-gradient(145deg, #e6e6e6, #b3b3b3); /* Updated fancy grey gradient background */
-        color: black; /* White text color for better contrast */
+        color: black; 
+        margin-bottom: 100px;
     }
 
     .team-section h2 {
-        margin-bottom: 50px; /* Adjust the space as needed */
+        font-size: 32px; /* Adjust based on preference */
+        margin-bottom: 75px; /* Adjust the space as needed */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
     }
     
@@ -164,10 +165,11 @@
         justify-content: center; /* Center items vertically */ 
         flex-basis: 45%; /* Adjust based on preference and screen size */
         height: 350px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.25); /* Deeper shadow for more depth */
+        transform: perspective(500px) rotateX(5deg) rotateY(5deg); /* 3D rotation effect */
         padding: 20px; /* Increased padding for better spacing */
         border-radius: 10px; /* Slightly rounded corners for a softer look */
-        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for a frosted glass look */
+        background: rgba(0, 0, 0, 0.473);
     }
     
     .team-member img {
@@ -187,6 +189,15 @@
         align-items: center;
         width: 100%;
         padding: 20px;
+    }
+
+    .faq-title {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 32px; 
+        color: black; 
+        margin-bottom: 60px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
     }
 
     .faq-item {
