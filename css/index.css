@@ -142,7 +142,7 @@
         text-align: center;
         padding: 40px 20px;
         color: black; 
-        margin-bottom: 100px;
+        margin-bottom: 175px;
     }
 
     .team-section h2 {
@@ -189,6 +189,8 @@
         align-items: center;
         width: 100%;
         padding: 20px;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.25); /* Deeper shadow for more depth */
     }
 
     .faq-title {
@@ -202,14 +204,14 @@
 
     .faq-item {
         width: 90%; /* Adjust based on preference */
-        margin: 10px 0;
-        border: 1px solid #ddd;
+        margin: 20px auto; /* Center items and increase spacing */
+        /* border: 1px solid #ddd; */
         border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     }
 
     .faq-question {
         padding: 15px;
-        background-color: #f7f7f7;
         cursor: pointer;
         font-weight: bold; /* Make questions stand out */
     }
@@ -220,9 +222,9 @@
         animation: fadeIn 0.5s ease-in-out;
     }
 
-    /* Fade-in effect */
+    /* Enhance the fadeIn effect for a smoother transition */
     @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 }
