@@ -107,7 +107,7 @@
     align-items: center;
     background-image: url('../images/guatemala-volcano.webp'); /* Path to your hero image */
     height: 100vh; /* Full height of the viewport */
-    margin-bottom: 50px; /* Adjust the space as needed */
+    margin-bottom: 0px; /* Adjust the space as needed */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Cover the entire div */
@@ -140,33 +140,43 @@
     /* meet the team section */
     .team-section {
         text-align: center;
-        padding: 20px;
+        padding: 40px 20px;
+        background: linear-gradient(145deg, #e6e6e6, #b3b3b3); /* Updated fancy grey gradient background */
+        color: black; /* White text color for better contrast */
     }
 
     .team-section h2 {
         margin-bottom: 50px; /* Adjust the space as needed */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
     }
     
     .team-members {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
     }
     
     .team-member {
+        display: flex; /* Make the team member a flex container */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */ 
         flex-basis: 45%; /* Adjust based on preference and screen size */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        padding: 10px;
-        border-radius: 8px;
+        height: 350px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+        padding: 20px; /* Increased padding for better spacing */
+        border-radius: 10px; /* Slightly rounded corners for a softer look */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for a frosted glass look */
     }
     
     .team-member img {
         /* max-width: 100%;
         height: auto; */
+        margin-bottom: 20px; /* Add space between the image and the text below it */
         width: 150px; /* Set a fixed width */
         height: 150px; /* Set a fixed height to match the width for a square aspect ratio */    
-        border-radius: 50%;
+        border-radius: 35%;
         object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
     }
 }
