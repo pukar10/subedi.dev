@@ -1,0 +1,193 @@
+@media (max-width: 768px) {
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /*top mobile nav bar*/
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed; /* Stick to the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Dark background */
+        color: #fff; /* White text */
+        padding: 10px 20px; /* Some padding */
+        z-index: 1000; /* Ensure it's above other content */
+    }
+    .logo-text {
+        display: block; /* Ensures the text is above the logo */
+        color: #fff; /* White text to match your color scheme */
+        font-size: 14px; /* Adjust size as needed */
+        text-align: center; /* Center the text above the logo */
+        margin-bottom: 5px; /* Space between the text and the logo */
+    }
+    .logo img {
+        max-width: 50px; /* Adjust the width as needed */
+        height: auto; /* Keeps the aspect ratio intact */
+      }
+    .phone-number {
+        text-decoration: none; /* Remove underline from link */
+        color: #fff; /* White text */
+        font-weight: bold; /* Make it stand out */
+        font-size: 14px;;
+    }
+    .menu-button {
+        background-color: #333; /* Slightly lighter than nav background */
+        color: #fff; /* White text */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+
+    /* Side menu for mobile */
+    .side-menu {
+        position: fixed;
+        left: -100%; /* Start off-screen */
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        transition: left 0.3s ease; /* Smooth transition for the menu */
+        z-index: 1000; /* Ensure it's below the nav but above other content */
+    }
+    .side-menu ul {
+        list-style-type: none; /* Remove bullet points */
+        margin: 0;
+        padding: 0;
+        padding-top: 30px;
+    }
+    .side-menu li {
+        background-color: #333; /* Darker background for the box */
+        margin: 10px 0; /* Add some space between boxes */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+    .side-menu a {
+        display: block; /* Make the link fill the entire container */
+        color: #fff; /* White text */
+        text-decoration: none; /* No underline */
+        font-size: 18px; /* Make text bigger */
+        padding: 15px 20px; /* Add padding to make the box bigger and text centered */
+    }
+    /* When the menu is active, it should slide in */
+    .side-menu.active {
+        left: 0;
+    }
+    .close-button {
+        position: absolute;
+        top: 10px; /* Adjust as needed */
+        right: 10px; /* Position to the right */
+        background-color: #333; /* Match the menu-button style or as desired */
+        color: #fff; /* White text */
+        border: none;
+        padding: 5px 10px; /* Adjust padding as needed */
+    }
+
+
+    /* Hero Section */
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../images/services-hero-min.webp'); /* Path to your hero image */
+        height: 100vh; /* Full height of the viewport */
+        margin-bottom: 100px; /* Adjust the space as needed */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Cover the entire div */
+    }
+    .hero-content {
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        color: white;
+        max-width: 90%; /* Ensures padding within the screen size */
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-sizing: border-box; /* Ensures padding doesn't expand the box */
+    }
+    .hero-content h1, .hero-content p {
+        margin: 10px 0;
+    }
+    .hero-content button {
+        background-color: salmon;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px; /* Adjust based on preference */
+    }
+        
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+    }
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+}
