@@ -126,6 +126,18 @@
         font-size: 16px; /* Adjust based on preference */
     }
         
+    /* Slideshow title */
+    .slideshow-title {
+        margin-bottom: 30px; /* Increased space between the slideshow title and slideshow */
+    }
+    .slideshow-title h2 {
+        color: salmon;
+        text-align: center;
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        margin-bottom: 10px; /* Less space below the title on mobile */
+        padding: 0 20px; /* Padding on the sides for smaller screens */
+        text-shadow: 1px 1px 2px #000000; /* Lighter shadow for a cleaner look on small screens */
+    }
 
     /* Slideshow container */
     .slideshow-container {
@@ -145,7 +157,7 @@
         width: auto;
         padding: 16px;
         margin-top: -22px;
-        color: white;
+        color: salmon;
         font-weight: bold;
         font-size: 18px;
         transition: 0.6s ease;
@@ -177,6 +189,7 @@
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
+        margin-bottom: 150px;
     }
     .active, .dot:hover {
         background-color: #717171;
@@ -189,5 +202,36 @@
     @keyframes fade {
         from {opacity: .4} 
         to {opacity: 1}
+    }
+
+    /* Services Section */
+    .our-services {
+        text-align: center;
+        padding: 20px;
+    }
+    .our-services h2 {
+        font-size: 2rem;
+        color: salmon;
+        margin-bottom: 20px;
+    }
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .service-item {
+        width: calc(50% - 20px); /* Three items per row */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .service-item h3 {
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .service-item p {
+        font-size: 1rem;
+        color: #666;
     }
 }
