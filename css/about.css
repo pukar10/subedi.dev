@@ -20,7 +20,6 @@
         padding: 10px 20px; /* Some padding */
         z-index: 1000; /* Ensure it's above other content */
     }
-
     .logo-text {
         display: block; /* Ensures the text is above the logo */
         color: #fff; /* White text to match your color scheme */
@@ -28,19 +27,16 @@
         text-align: center; /* Center the text above the logo */
         margin-bottom: 5px; /* Space between the text and the logo */
     }
-
     .logo img {
         max-width: 50px; /* Adjust the width as needed */
         height: auto; /* Keeps the aspect ratio intact */
       }
-    
     .phone-number {
         text-decoration: none; /* Remove underline from link */
         color: #fff; /* White text */
         font-weight: bold; /* Make it stand out */
         font-size: 14px;;
     }
-    
     .menu-button {
         background-color: #333; /* Slightly lighter than nav background */
         color: #fff; /* White text */
@@ -49,6 +45,7 @@
         cursor: pointer;
         font-size: 18px;
     }
+
 
     /* Side menu for mobile */
     .side-menu {
@@ -62,20 +59,17 @@
         transition: left 0.3s ease; /* Smooth transition for the menu */
         z-index: 1000; /* Ensure it's below the nav but above other content */
     }
-
     .side-menu ul {
         list-style-type: none; /* Remove bullet points */
         margin: 0;
         padding: 0;
         padding-top: 30px;
     }
-
     .side-menu li {
         background-color: #333; /* Darker background for the box */
         margin: 10px 0; /* Add some space between boxes */
         transition: background-color 0.3s; /* Smooth transition for hover effect */
     }
-
     .side-menu a {
         display: block; /* Make the link fill the entire container */
         color: #fff; /* White text */
@@ -83,12 +77,10 @@
         font-size: 18px; /* Make text bigger */
         padding: 15px 20px; /* Add padding to make the box bigger and text centered */
     }
-    
     /* When the menu is active, it should slide in */
     .side-menu.active {
         left: 0;
     }
-
     .close-button {
         position: absolute;
         top: 10px; /* Adjust as needed */
@@ -98,6 +90,7 @@
         border: none;
         padding: 5px 10px; /* Adjust padding as needed */
     }
+
 
     /* Hero Section */
     .hero-image {
@@ -111,7 +104,6 @@
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Cover the entire div */
     }
-
     .hero-content {
         background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
         color: white;
@@ -121,11 +113,9 @@
         border-radius: 8px;
         box-sizing: border-box; /* Ensures padding doesn't expand the box */
     }
-    
     .hero-content h1, .hero-content p {
         margin: 10px 0;
     }
-    
     .hero-content button {
         background-color: salmon;
         color: white;
@@ -136,28 +126,79 @@
         font-size: 16px; /* Adjust based on preference */
     }
 
+
     /* About Us Section Styling */
     .about-us {
         background-color: #f4f4f4; /* Light grey background */
         padding: 40px 20px; /* Padding */
         color: #333; /* Dark text color for readability */
     }
-
     .about-us .container {
         max-width: 1200px; /* Max width of the content */
         margin: 0 auto; /* Center the content */
         padding: 0 15px; /* Padding on the sides */
     }
-
     .about-us h2 {
         text-align: center; /* Center the heading */
         margin-bottom: 20px; /* Space below the heading */
         font-size: 2.5rem; /* Larger font size for the heading */
     }
-
     .about-us p {
         text-align: justify; /* Justify the paragraph text */
         line-height: 1.6; /* Line height for readability */
         margin-bottom: 20px; /* Space between paragraphs */
     }
+
+
+    /* Our Mission Section Styling */
+    .our-mission {
+        background-color: #ffffff; /* White background for contrast */
+        padding: 40px 20px; /* Padding */
+        color: #333; /* Dark text color for readability */
+    }
+    .our-mission .container {
+        max-width: 1200px; /* Max width of the content */
+        margin: 0 auto; /* Center the content */
+        padding: 0 15px; /* Padding on the sides */
+    }
+    .our-mission h2 {
+        text-align: center; /* Center the heading */
+        margin-bottom: 20px; /* Space below the heading */
+        font-size: 2.5rem; /* Larger font size for the heading */
+        color: salmon; /* Blue color for the heading for distinction */
+    }
+    .our-mission p {
+        text-align: justify; /* Justify the paragraph text */
+        line-height: 1.6; /* Line height for readability */
+        margin-bottom: 20px; /* Space between paragraphs */
+    }
+
+
+    .our-ethics {
+        background-color: #f8f9fa; /* Slightly different background for contrast */
+        padding: 40px 20px; /* Consistent padding */
+        color: #333; /* Consistent text color for readability */
+    }
+    
+
+    /* Our ethics Section Styling */
+    .our-ethics .container {
+        max-width: 1200px; /* Consistent max width */
+        margin: 0 auto; /* Centered content */
+        padding: 0 15px; /* Consistent padding on the sides */
+    }
+    
+    .our-ethics h2 {
+        text-align: center; /* Centered heading */
+        margin-bottom: 20px; /* Space below the heading */
+        font-size: 2.5rem; /* Consistent font size for the heading */
+        color: #17a2b8; /* Different color for distinction */
+    }
+    
+    .our-ethics p {
+        text-align: justify; /* Justified paragraph text */
+        line-height: 1.6; /* Consistent line height for readability */
+        margin-bottom: 20px; /* Space between paragraphs */
+    }
+
 }
